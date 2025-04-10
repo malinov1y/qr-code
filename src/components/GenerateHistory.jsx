@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
-import { QRCodeSVG } from 'qrcode.react';
+import { QRCodeCanvas } from 'qrcode.react';
 import { GENERATE_DATA } from '../constants';
 import { RemoveItemButton } from './RemoveItemButton.jsx'
+import { DownloadButton } from './DownloadButton.jsx'
 
 export const GenerateHistory = () => {
     const [data, setData] = useState([]);
@@ -22,13 +23,14 @@ export const GenerateHistory = () => {
             {data.map((text) => (
                 <div key={text}>
                     <p>{text}</p>
-                    <QRCodeSVG value={text} size="100" />
+                    <QRCodeCanvas id="qr-code-canvas" value={text} size={100} />
                     <RemoveItemButton
                         item={text}
                         data={data}
                         setData={setData}
                         storageKey={GENERATE_DATA}
                     />
+                    <DownloadButton canvasID="qr-code-canvas" fileName={text}/>
                 </div>
             ))}
         </div>
