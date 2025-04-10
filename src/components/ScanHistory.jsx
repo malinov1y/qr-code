@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { QRCodeSVG } from 'qrcode.react';
 import { GENERATE_DATA, SCAN_DATA } from '../constants';
-import { RemoveItemButton } from '../components/RemoveItemButton.jsx'
+import { RemoveItemButton } from './RemoveItemButton.jsx'
 
 export const ScanHistory = () => {
     const [data, setData] = useState([]);
@@ -27,7 +27,7 @@ export const ScanHistory = () => {
                         item={text}
                         data={data}
                         setData={setData}
-                        storageKey={GENERATE_DATA}
+                        storageKey={SCAN_DATA}
                     />
                 </div>
             ))}

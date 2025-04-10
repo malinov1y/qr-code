@@ -1,9 +1,8 @@
 import { useState } from 'react';
-import { QRCodeSVG } from 'qrcode.react';
-
+import { QRCodeCanvas } from 'qrcode.react';
 import s from './qrCodeGenerator.module.css';
-
 import { GENERATE_DATA } from '../../constants';
+import { DownloadButton } from '../DownloadButton'
 
 export const QrCodeGenerator = () => {
     const [value, setValue] = useState('');
@@ -41,7 +40,8 @@ export const QrCodeGenerator = () => {
 
             { result !== '' ?
             <div className={s.qrWrapper}>
-                <QRCodeSVG value={result} size="200" />
+                <QRCodeCanvas id="qr-code-canvas" value={result} size={200} />
+                <DownloadButton canvasID="qr-code-canvas" fileName={result} />
             </div> :
             null }
         </div>

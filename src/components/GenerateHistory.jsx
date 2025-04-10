@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { QRCodeSVG } from 'qrcode.react';
 import { GENERATE_DATA } from '../constants';
-import { RemoveItemButton } from '../components/RemoveItemButton.jsx'
+import { RemoveItemButton } from './RemoveItemButton.jsx'
 
 export const GenerateHistory = () => {
     const [data, setData] = useState([]);
