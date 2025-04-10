@@ -28,7 +28,7 @@ export const QrCodeScanner = () => {
                 constraints={{ facingMode: 'environment' }}
                 scanDelay={1000}
                 onResult={scanHandler}
-                containerStyle={{width: '200px'}}
+                containerStyle={{width: '400px'}}
             />
             <a
                 href={scanned}
