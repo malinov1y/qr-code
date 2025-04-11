@@ -28,16 +28,11 @@ export const QrCodeScanner = () => {
                 constraints={{ facingMode: 'environment' }}
                 scanDelay={1000}
                 onResult={scanHandler}
-                containerStyle={{width: '400px'}}
+                containerStyle={{ width: '400px' }}
             />
-            <a
-                href={scanned}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={s.result}
-            >
-                {scanned}
-            </a>
+            {scanned && (
+                <p className={s.result}>{scanned}</p>
+            )}
         </div>
     );
 };
