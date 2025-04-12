@@ -1,3 +1,5 @@
+import s from './downloadButton.module.scss';
+
 export const DownloadButton = ({ canvasID, fileName }) => {
     const handleDownload = () => {
         const canvas = document.getElementById(canvasID);
@@ -11,7 +13,7 @@ export const DownloadButton = ({ canvasID, fileName }) => {
     };
 
     return(
-        <button onClick={handleDownload}>
+        <button onClick={handleDownload} className={s.button}>
             Схранить в PNG
         </button>
     );

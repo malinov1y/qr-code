@@ -1,0 +1,48 @@
+.container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.clearButton {
+  background-color: #db5f17;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  transition: background-color 0.3s ease;
+}
+.clearButton:hover {
+  background-color: #ad4b12;
+}
+
+.qrItem {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+.qrItem p {
+  flex: 1 1 100%;
+  color: #333;
+  font-weight: 500;
+  margin: 0;
+  word-break: break-word;
+}
+.qrItem .buttons {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}/*# sourceMappingURL=generateHistory.module.css.map */

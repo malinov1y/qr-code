@@ -2,9 +2,9 @@ import { Routes, Route } from 'react-router-dom';
 import { Navigation } from './components/Navigation/Navigation';
 import { QrCodeGenerator } from './components/Generate/QrCodeGenerator';
 import { QrCodeScanner } from './components/Scan/QrCodeScanner';
-import { GenerateHistory } from './components/GenerateHistory';
-import { ScanHistory } from './components/ScanHistory';
-import { QrCodeScanImage } from './components/Scan/QrCodeScanImage'
+import { GenerateHistory } from './components/History/GenerateHistory';
+import { ScanHistory } from './components/History/ScanHistory';
+import { QrCodeScanImage } from './components/ScanImage/QrCodeScanImage'
 
 const Layout = () => {
     return (

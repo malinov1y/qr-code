@@ -1,3 +1,5 @@
+import s from './removeItemButton.module.scss';
+
 export const RemoveItemButton = ({ item, data, setData, storageKey }) => {
     const handleRemove = () => {
         const updatedData = data.filter((element) => element !== item);
@@ -6,6 +8,6 @@ export const RemoveItemButton = ({ item, data, setData, storageKey }) => {
     };
 
     return(
-        <button onClick={handleRemove}>Удалить</button>
+        <button onClick={handleRemove} className={s.button}>Удалить</button>
     )
 };

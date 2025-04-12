@@ -1,14 +1,18 @@
 import { useState } from 'react';
 import { QRCodeCanvas } from 'qrcode.react';
-import s from './qrCodeGenerator.module.css';
+import s from './qrCodeGenerator.module.scss';
 import { GENERATE_DATA } from '../../constants';
-import { DownloadButton } from '../DownloadButton'
+import { DownloadButton } from '../DownloadButton/DownloadButton'
 
 export const QrCodeGenerator = () => {
     const [value, setValue] = useState('');
     const [result, setResult] = useState('');
 
     const onClickHandler = () => {
+        if (!value.trim()) {
+            return;
+        }
+
         const prevData = JSON.parse(localStorage.getItem(GENERATE_DATA) || '[]');
 
         localStorage.setItem(

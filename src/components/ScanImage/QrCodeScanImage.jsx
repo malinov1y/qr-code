@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { SCAN_DATA } from '../../constants';
 import jsQR from 'jsqr';
+import s from './qrCodeScanImage.module.scss';
 
 export const QrCodeScanImage = () => {
     const [scanned, setScanned] = useState(null);
@@ -46,15 +47,15 @@ export const QrCodeScanImage = () => {
     };
 
     return (
-        <div>
+        <div className={s.container}>
             <input
                 type="file"
                 accept="image/*" // позволяет выбирать только изображения
                 onChange={handleImageUpload}
-                className="uploadInput"
+                className={s.uploadInput}
             />
             {scanned && (
-                <p>{scanned}</p>
+                <p className={s.result}>{scanned}</p>
             )}
         </div>
     );
